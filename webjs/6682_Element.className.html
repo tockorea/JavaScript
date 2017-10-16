@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Element.className</title>
+</head>
+
+<body>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li id="active">JavaScript</li>
+  </ul>
+  <script type="text/javascript">
+    var active = document.getElementById('active');
+    active.className = "important current";
+    console.log(active.className);
+    active.className += " readed"
+    console.log(active.className);
+  </script>
+</body>
+
+</html>
