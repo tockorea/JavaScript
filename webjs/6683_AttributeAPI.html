@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>속성 제어 API</title>
+</head>
+
+<body>
+  <a id="target" href="http://opentutorials.org">opentutorials</a>
+  <script type="text/javascript">
+    var t = document.getElementById('target');
+    console.log(t.getAttribute('href'));
+    t.setAttribute('title', 'opentutorials.org');
+    console.log(t.hasAttribute('title'));
+    t.removeAttribute('title');
+    console.log(t.hasAttribute('title'));
+  </script>
+</body>
+
+</html>

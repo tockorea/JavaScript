@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery 속성 제어 API</title>
+</head>
+
+<body>
+  <a id="target" href="http://opentutorials.org">opentutorials</a>
+  <script src="jquery-3.2.1.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var t = $('#target');
+    console.log(t.attr('href'));
+    t.attr('title', 'opentutorials.org');
+    t.removeAttr('title');
+  </script>
+</body>
+
+</html>

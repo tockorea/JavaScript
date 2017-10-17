@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>attribute vs property</title>
+</head>
+
+<body>
+  <a id="target" href="./6683_attribute_vs_property1.html">ot</a>
+  <script type="text/javascript">
+    var target = document.getElementById('target');
+
+    // property 방식
+    console.log('target.href : ', target.href);
+    // attribute 방식
+    console.log('target.getAttribute("href") : ', target.getAttribute("href"))
+  </script>
+</body>
+
+</html>
