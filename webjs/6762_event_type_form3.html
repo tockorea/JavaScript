@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>이벤트 타입 - form 3</title>
+</head>
+
+<body>
+  <input id="target" type="text">
+  <script type="text/javascript">
+    var t = document.getElementById('target');
+    t.addEventListener('blur', function(event) {
+      alert('blur');
+    });
+    t.addEventListener('focus', function(event) {
+      alert('focus');
+    })
+  </script>
+</body>
+
+</html>

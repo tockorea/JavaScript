@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JSON demo 1</title>
+</head>
+
+<body>
+  <p id="timezones"></p>
+  <input type="button" id="execute" value="execute">
+  <script type="text/javascript">
+    document.querySelector('input').addEventListener('click', function(event) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', './6844_time.php');
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var _tzs = xhr.responseText;
+          var tzs = _tzs.split(',');
+          var _str = '';
+          for (var i = 0; i < tzs.length; i++) {
+            _str += '<li>' + tzs[i] + '</li>';
+          }
+          _str = '<ul>' + _str + '</ul>';
+          document.querySelector('#timezones').innerHTML = _str;
+        }
+      }
+      xhr.send();
+    });
+  </script>
+</body>
+
+</html>
